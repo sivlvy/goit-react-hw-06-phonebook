@@ -21,6 +21,7 @@ export const contactsSlice = createSlice({
 
 			if (existsContact) {
 				Notify.failure(`${newName} is already in contacts`);
+				return;
 			}
 
 			newContact.id = nanoid();
