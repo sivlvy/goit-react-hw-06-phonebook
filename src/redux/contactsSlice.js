@@ -32,8 +32,8 @@ export const contactsSlice = createSlice({
 		deleteContact(state, action) {
 			const { contacts } = state;
 			const idDeleteContact = action.payload;
-
-			const index = contacts.findIndex(({ id }) => id !== idDeleteContact);
+			console.log(action);
+			const index = contacts.findIndex(({ id }) => id === idDeleteContact);
 
 			contacts.splice(index, 1);
 		},
